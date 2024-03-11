@@ -17,22 +17,23 @@
                     if (data) {
                         const blogContainer = document.getElementById('blog-container');
     
-                        // Iterate through each blog entry and create HTML elements
-                        for (const key in data) {
-                            if (data.hasOwnProperty(key)) {
-                                const blog = data[key];
+                        // Get the keys and reverse the order
+                        const reversedKeys = Object.keys(data).reverse();
     
-                                // Create HTML elements
-                                const blogElement = document.createElement('div');
-                                blogElement.innerHTML = `
-                                    <h3>${blog.title}</h3>
-                                    <p>${blog.content}</p>
-                                    <hr>
-                                `;
+                        // Iterate through each blog entry in reverse order and create HTML elements
+                        for (const key of reversedKeys) {
+                            const blog = data[key];
     
-                                // Append the blog element to the container
-                                blogContainer.appendChild(blogElement);
-                            }
+                            // Create HTML elements
+                            const blogElement = document.createElement('div');
+                            blogElement.innerHTML = `
+                                <h3>${blog.title}</h3>
+                                <p>${blog.content}</p>
+                                <hr>
+                            `;
+    
+                            // Append the blog element to the container
+                            blogContainer.appendChild(blogElement);
                         }
                     } else {
                         console.error('No data available.');
