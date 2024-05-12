@@ -25,6 +25,11 @@
   <priority>0.80</priority>
 </url>
 <url>
+  <loc>https://sossinaydev.github.io/tools.html</loc>
+  <lastmod>2024-03-14T15:12:54+00:00</lastmod>
+  <priority>0.60</priority>
+</url>
+<url>
   <loc>https://sossinaydev.github.io/discord.html</loc>
   <lastmod>2024-03-14T15:12:54+00:00</lastmod>
   <priority>0.30</priority>
