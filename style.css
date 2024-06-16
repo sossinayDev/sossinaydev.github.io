@@ -11,6 +11,11 @@ html{
     }
 }
 
+.ck-table-resized{
+    font-size: 120%;
+    margin: 2%;
+}
+
 .topnav {
     background-color: #2a010122;
     overflow: hidden;
