@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif; /* Apply Poppins font to the entire body */
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 10%;
+  background-color: #030027;
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center;
+  padding-top: 20px; /* Add space at the top */
+}
+
+.navbar-logo {
+  width: 80%; /* Adjust the width of the logo to fit the navbar */
+  height: auto;
+  margin-bottom: 20px; /* Add some space between the logo and the links */
+}
+
+.navbar ul {
+  list-style-type: none;
+  width: 100%; /* Ensure the list takes up the full width */
+}
+
+.navbar ul li {
+  margin: 20px 0;
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  display: block;
+  text-align: center;
+  padding: 10px 0;
+  width: 100%;
+  font-family: 'Poppins', sans-serif; /* Apply Poppins font to links */
+  font-weight: 600; /* Ensure it is using SemiBold */
+}
+
+.navbar ul li a:hover {
+  background-color: #575757;
+  transition: 0.3s;
+}

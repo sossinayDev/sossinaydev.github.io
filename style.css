@@ -1,58 +1,57 @@
-html{
-    font-family: monospace;
-    background-color: #252525;
-    color: #ffffff;
-    font-size: x-large;
-}
-.current_game_indev{
-    color: #ffffff;
-    a{
-        color:#ffbdbd;
-    }
-}
-
-.ck-table-resized{
-    font-size: 120%;
-    margin: 2%;
+body {
+    background-color: black;
+    font-family: 'Poppins', sans-serif; /* Apply Poppins font to the entire body */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    height: 100vh; /* Set height to viewport height */
+    overflow: hidden; /* Prevent scrolling on body */
+    position: relative; /* Needed for positioning the overlay */
+    background-image: url('assets/main_background.png'); /* Set background image */
+    background-size: cover; /* Make sure the background covers the entire screen */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent background image from repeating */
+    background-attachment: fixed; /* Keep the background fixed during scroll */
 }
 
-.topnav {
-    background-color: #2a010122;
-    overflow: hidden;
-    font-size: xx-large;
+div {
+    overflow-y: auto; /* Enable vertical scrolling */
+    height: 100vh; /* Set height to the viewport height */
+    margin-bottom: 10%; 
 }
-.topnav a:hover {
-    background-color: #15000012;
-    color: rgb(255, 0, 0);
+
+.content {
+    color: white; /* Change text color to contrast with background */
+    padding: 20px; /* Add some padding for content */
+    position: relative; /* Position content relative to body */
+    z-index: 2; /* Bring content in front of the overlay */
 }
-.topnav a.active {
-    color: white;
+
+.invisible-table {
+    width: 100%; /* Make the table stretch across the full width of the page */
+    border-collapse: collapse; /* Remove gaps between table cells */
 }
-a{
-    color: #d00000;
+
+.invisible-table th,
+.invisible-table td {
+    border: none; /* Remove borders */
+    padding: 10px; /* Add some padding for spacing */
+    text-align: left; /* Align text to the left */
 }
-h1{
-    margin-top: 2%;
-    margin-bottom: 2%;
-    color: #9c0f0f;
-    font-size:500%
+
+.image-link {
+    display: inline-block; /* Allows padding and margin */
+    height: 100px; /* Set desired height for the images */
+    width: auto; /* Maintain aspect ratio */
+    image-rendering: pixelated; /* Ensure pixel art is displayed correctly */
+    image-rendering: -webkit-optimize-contrast; /* For Safari */
+    transition: transform 0.3s ease, opacity 0.3s; /* Add smooth transition for scaling and opacity */
 }
-h2{
-    color: #590606;
-    font-size:300%
+
+.image-link:hover {
+    transform: scale(1.2); /* Scale the image to 120% on hover */
+    opacity: 0.9; /* Optional: slightly change opacity on hover for visual feedback */
 }
-h3{
-    color: #7b3232;
-    font-size: 150%;
-}
-h4{
-    color: #985959;
-    font-size: 150%;
-    margin-bottom: 1%;
-}
-h5{
-    color: #ff9e9e;
-}
+
 strong {
-    color: #ff9e9e;
+    color: rgb(0, 179, 255); /* Set color for strong elements */
 }
