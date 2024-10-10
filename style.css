@@ -17,7 +17,7 @@ div {
     overflow-y: auto; /* Enable vertical scrolling */
     height: 1
 90vh; /* Set height to the viewport height */
-    margin-bottom: 10%; 
+    margin-bottom: 30%; 
 }
 
 .content {
