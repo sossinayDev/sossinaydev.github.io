@@ -15,7 +15,8 @@ body {
 
 div {
     overflow-y: auto; /* Enable vertical scrolling */
-    height: 100vh; /* Set height to the viewport height */
+    height: 1
+90vh; /* Set height to the viewport height */
     margin-bottom: 10%; 
 }
 
