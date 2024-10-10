@@ -27,31 +27,57 @@ div {
 }
 
 .invisible-table {
-    width: 100%; /* Make the table stretch across the full width of the page */
-    border-collapse: collapse; /* Remove gaps between table cells */
+    width: 100%;
+    border-collapse: collapse; /* Remove gaps between cells */
+    text-align: center; /* Center text and images */
 }
 
-.invisible-table th,
 .invisible-table td {
-    border: none; /* Remove borders */
-    padding: 10px; /* Add some padding for spacing */
-    text-align: left; /* Align text to the left */
+    padding: 10px;
+    vertical-align: top; /* Align text to the top */
+}
+
+.text-row td {
+    vertical-align: top; /* Align text to the top */
+    font-weight: bold; /* Optional: make text bold */
 }
 
 .image-link {
-    display: inline-block; /* Allows padding and margin */
-    height: 100px; /* Set desired height for the images */
-    width: auto; /* Maintain aspect ratio */
-    image-rendering: pixelated; /* Ensure pixel art is displayed correctly */
-    image-rendering: -webkit-optimize-contrast; /* For Safari */
-    transition: transform 0.3s ease, opacity 0.3s; /* Add smooth transition for scaling and opacity */
+    display: inline-block;
+    height: 100px;
+    width: auto;
+    image-rendering: pixelated;
+    image-rendering: -webkit-optimize-contrast;
+    transition: transform 0.3s ease, opacity 0.3s;
 }
 
 .image-link:hover {
-    transform: scale(1.2); /* Scale the image to 120% on hover */
-    opacity: 0.9; /* Optional: slightly change opacity on hover for visual feedback */
+    transform: scale(1.2);
+    opacity: 0.9;
 }
+
 
 strong {
     color: rgb(0, 179, 255); /* Set color for strong elements */
+}
+
+/* Responsive styles for mobile */
+@media (max-width: 768px) {
+    .invisible-table {
+        display: block; /* Allow the table to be scrollable horizontally */
+        overflow-x: auto; /* Enable horizontal scrolling on smaller screens */
+        white-space: nowrap; /* Prevent table cells from wrapping onto new lines */
+    }
+
+    .invisible-table td, .invisible-table th {
+        display: inline-block; /* Stack cells for smaller screens */
+        width: auto; /* Maintain natural width for images */
+        padding: 2px; /* Reduce padding for tighter spacing on mobile */
+        text-align: center; /* Center the content for readability */
+    }
+
+    .image-link {
+        height: 80px; /* Reduce image size for mobile */
+        margin: 0 5px; /* Reduce space between images */
+    }
 }

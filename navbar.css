@@ -52,3 +52,34 @@ body {
   background-color: #575757;
   transition: 0.3s;
 }
+
+/* Icon links are hidden on larger screens */
+.icon-link {
+  display: none;
+  width: 24px;
+  height: 24px;
+  margin: auto;
+}
+
+/* Text links are displayed by default */
+.text-link {
+  display: inline-block;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  /* Hide text links on small screens */
+  .text-link {
+    display: none;
+  }
+
+  /* Show icons on small screens */
+  .icon-link {
+    display: inline-block;
+  }
+
+  .icon-link:hover {
+    opacity: 0.8; /* Add hover effect for icons */
+    transition: opacity 0.3s;
+  }
+}
