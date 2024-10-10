@@ -21,7 +21,7 @@ div {
 
 .content {
     color: white; /* Change text color to contrast with background */
-    padding: 20px; /* Add some padding for content */
+    padding: 10%; /* Add some padding for content */
     position: relative; /* Position content relative to body */
     z-index: 2; /* Bring content in front of the overlay */
 }
