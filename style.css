@@ -15,7 +15,7 @@ body {
 }
 
 div {
-    overflow-y: auto;
+    overflow-y: hide;
     min-height: 90vh; /* Use min-height instead of a fixed height */
     margin-bottom: 30%; 
 }
@@ -60,6 +60,10 @@ div {
 
 strong {
     color: rgb(0, 179, 255);
+}
+
+a:visited, a:link {
+    color: rgb(0, 110, 255);
 }
 
 /* Responsive styles for mobile */
