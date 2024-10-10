@@ -1,47 +1,47 @@
 body {
     background-color: black;
-    font-family: 'Poppins', sans-serif; /* Apply Poppins font to the entire body */
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
-    height: 100vh; /* Set height to viewport height */
-    overflow: hidden; /* Prevent scrolling on body */
-    position: relative; /* Needed for positioning the overlay */
-    background-image: url('assets/main_background.png'); /* Set background image */
-    background-size: cover; /* Make sure the background covers the entire screen */
-    background-position: center; /* Center the background image */
-    background-repeat: no-repeat; /* Prevent background image from repeating */
-    background-attachment: fixed; /* Keep the background fixed during scroll */
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; /* Allow body to expand if needed */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    position: relative;
+    background-image: url('assets/main_background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding-bottom: env(safe-area-inset-bottom); /* Ensure safe area padding on mobile */
 }
 
 div {
-    overflow-y: auto; /* Enable vertical scrolling */
-    height: 1
-90vh; /* Set height to the viewport height */
+    overflow-y: auto;
+    min-height: 90vh; /* Use min-height instead of a fixed height */
     margin-bottom: 30%; 
 }
 
 .content {
-    color: white; /* Change text color to contrast with background */
-    height: 90%;
-    padding: 10%; /* Add some padding for content */
-    position: relative; /* Position content relative to body */
-    z-index: 2; /* Bring content in front of the overlay */
+    color: white;
+    height: auto; /* Let content expand */
+    padding: 10%;
+    position: relative;
+    z-index: 2;
 }
 
 .invisible-table {
     width: 100%;
-    border-collapse: collapse; /* Remove gaps between cells */
-    text-align: center; /* Center text and images */
+    border-collapse: collapse;
+    text-align: center;
 }
 
 .invisible-table td {
     padding: 10px;
-    vertical-align: top; /* Align text to the top */
+    vertical-align: top;
 }
 
 .text-row td {
-    vertical-align: top; /* Align text to the top */
-    font-weight: bold; /* Optional: make text bold */
+    vertical-align: top;
+    font-weight: bold;
 }
 
 .image-link {
@@ -58,28 +58,27 @@ div {
     opacity: 0.9;
 }
 
-
 strong {
-    color: rgb(0, 179, 255); /* Set color for strong elements */
+    color: rgb(0, 179, 255);
 }
 
 /* Responsive styles for mobile */
 @media (max-width: 768px) {
     .invisible-table {
-        display: block; /* Allow the table to be scrollable horizontally */
-        overflow-x: auto; /* Enable horizontal scrolling on smaller screens */
-        white-space: nowrap; /* Prevent table cells from wrapping onto new lines */
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
     }
 
     .invisible-table td, .invisible-table th {
-        display: inline-block; /* Stack cells for smaller screens */
-        width: auto; /* Maintain natural width for images */
-        padding: 2px; /* Reduce padding for tighter spacing on mobile */
-        text-align: center; /* Center the content for readability */
+        display: inline-block;
+        width: auto;
+        padding: 2px;
+        text-align: center;
     }
 
     .image-link {
-        height: 80px; /* Reduce image size for mobile */
-        margin: 0 5px; /* Reduce space between images */
+        height: 80px;
+        margin: 0 5px;
     }
 }
