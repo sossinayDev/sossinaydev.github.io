@@ -70,6 +70,11 @@ div .cover_container {
     height: min-content;
     text-align: center;
     margin-bottom: 2%;
+    img {
+        border-radius: 15px; /* Adjust value for the desired roundness */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add soft shadow for depth */
+        display: block; /* Removes bottom margin caused by inline elements */
+    }
 }
 
 .copy_button {
@@ -93,11 +98,7 @@ div .cover_container {
 
 
 
-img {
-    border-radius: 15px; /* Adjust value for the desired roundness */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add soft shadow for depth */
-    display: block; /* Removes bottom margin caused by inline elements */
-}
+
 
 button {
     background-color: #0f2c8b; /* Clean, modern blue color */
