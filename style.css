@@ -15,9 +15,7 @@ body {
 }
 
 div {
-    overflow-y: hide;
-    min-height: 90vh; /* Use min-height instead of a fixed height */
-    margin-bottom: 30%; 
+    margin-bottom: 5%; 
 }
 
 .content {
@@ -63,7 +61,80 @@ strong {
 }
 
 a:visited, a:link {
+    margin: 0;
     color: rgb(0, 110, 255);
+}
+
+div .cover_container {
+    width: min-content;
+    height: min-content;
+    text-align: center;
+    margin-bottom: 2%;
+}
+
+.copy_button {
+    margin: 5px;          /* Compact margin */
+    padding: 6px 12px;    /* Padding provides space around the text */
+    font-size: 16px;      /* Adjust the font size for readability */
+    line-height: 1.5;     /* Line height to ensure proper spacing inside */
+    border: none;         /* Remove default button border */
+    border-radius: 4px;   /* Slightly rounded corners for a cleaner look */
+    background-color: #3498db; /* Button background color */
+    color: white;         /* Text color */
+    cursor: pointer;      /* Pointer cursor to indicate interactivity */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effect */
+}
+
+/* Optional: Hover effect */
+.copy_button:hover {
+    background-color: #2980b9;  /* Darker shade on hover */
+}
+
+
+
+
+img {
+    border-radius: 15px; /* Adjust value for the desired roundness */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add soft shadow for depth */
+    display: block; /* Removes bottom margin caused by inline elements */
+}
+
+button {
+    background-color: #0f2c8b; /* Clean, modern blue color */
+    color: white;              /* White text color */
+    padding: 10px 20px;        /* Padding for a balanced look */
+    font-size: 16px;           /* Slightly larger font for readability */
+    border: none;              /* Remove default border */
+    border-radius: 5px;        /* Rounded corners for a smooth look */
+    cursor: pointer;           /* Pointer cursor to indicate interactivity */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+/* Hover effect */
+button:hover {
+    background-color: #2b29b9;  /* Darker shade on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Active state when button is clicked */
+button:active {
+    background-color: #1e3992;  /* Even darker shade when active */
+    transform: translateY(0);   /* Reset lift effect */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Reduce shadow */
+}
+
+/* Focus state (for accessibility) */
+button:focus {
+    outline: none;               /* Remove default outline */
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.4); /* Custom focus ring */
+}
+
+/* Optional: Disabled button styles */
+button:disabled {
+    background-color: #95a5a6;  /* Grey color for disabled buttons */
+    cursor: not-allowed;        /* Show a "not-allowed" cursor */
+    box-shadow: none;           /* No shadow for disabled buttons */
 }
 
 /* Responsive styles for mobile */
