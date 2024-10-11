@@ -5,11 +5,35 @@
 </head>
 
 <body>
-<script>window.scrollTo(0,0);</script>
+    <script>window.scrollTo(0, 0);</script>
+
+    <!-- Analytics -->
+    <script>
+
+        const myDeviceId = 'd1cd73a3-0be1-4822-a13a-3a2955e276ce';
+
+        let userId = localStorage.getItem('user_id');
+
+        if (!userId) {
+            userId = crypto.randomUUID();
+            localStorage.setItem('user_id', userId);
+        }
+
+        if (userId !== myDeviceId) {
+            fetch('https://sossinaydev-analyt-default-rtdb.firebaseio.com/homepage_sosDev/site-loads.json').then(r => r.json()).then(d => fetch('https://sossinaydev-analyt-default-rtdb.firebaseio.com/homepage_sosDev/site-loads.json', { method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify((d || 0) + 1) }));
+            console.log("Site visit logged.");
+        }
+        else {
+            console.log("Hello, sossinay");
+        }
+
+
+    </script>
+
     <div class="navbar">
         <!-- Add logo image before the list -->
         <img src="assets/logo.png" alt="Logo" class="navbar-logo">
-        
+
         <ul>
             <li>
                 <a href="index.html" target="_parent">
