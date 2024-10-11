@@ -8,11 +8,30 @@ if (!userId) {
     localStorage.setItem('user_id', userId);
 }
 
+// Get the current file name from the URL path
+let currentFileName = window.location.pathname.split('/').pop() || 'index'; // Default to 'index' if no file name
+currentFileName = currentFileName.replace(".html", "");
+console.log("Current file name:", currentFileName); // Log the current file name
+
 if (userId !== myDeviceId) {
-    fetch('https://sossinaydev-analyt-default-rtdb.firebaseio.com/homepage_sosDev/site-loads.json').then(r => r.json()).then(d => fetch('https://sossinaydev-analyt-default-rtdb.firebaseio.com/homepage_sosDev/site-loads.json', { method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify((d || 0) + 1) }));
-    console.log("Site visit logged.");
-}
-else {
+    const url = `https://sossinaydev-analyt-default-rtdb.firebaseio.com/homepage_sosDev/site-loads/${currentFileName}.json`;
+
+    fetch(url)
+        .then(r => {
+            if (!r.ok) {
+                throw new Error(`HTTP error! status: ${r.status}`); // Capture non-200 responses
+            }
+            return r.json();
+        })
+        .then(d => {
+            return fetch(url, {
+                method: 'PUT',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify((d || 0) + 1)
+            });
+        })
+        .then(() => console.log("Site visit logged."))
+        .catch(error => console.error("Error logging site visit:", error.message));
+} else {
     console.log("Hello, sossinay");
 }
-
