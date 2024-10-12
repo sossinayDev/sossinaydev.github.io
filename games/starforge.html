@@ -7,6 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
   <link href="../style.css" rel="stylesheet">
   <script src="../analytics.js"></script>
+  <script src="../sidebar_gallery.js"></script>
   <link rel="icon" href="../assets/logo.png">
   <title>Starforge</title>
 </head>
@@ -15,87 +16,96 @@
 
   <iframe src="../navbar.html" class="navbar-frame"
     style="border:0; position:fixed; top:0; left:0; width:100%; height:100%;"></iframe>
+  <div class="sidebar" id="sidebar"></div>
 
   <div class="content" style="margin-left: 12%;">
 
-    <h1 id="starforge">Starforge <a href="./Starforge-demo.html">[PLAY ON PC]</a> <- Geit evt. nid (Server updates und so)</h1>
-    <p><strong><em>One of the worst sandbox MMOs in existence</em></strong><br /><br />
-      Starforge will be an MMO Sandbox game playing in space. It will consist of many solar systems scattered across
-      different districts of the galaxy. The only rule outside of Galaxentre is: <strong>There are none.</strong></p>
-    <h2 id="features">Features</h2>
-    <h3 id="solar-system-simulation">Solar system simulation</h3>
-    <p>Solar systems within Starforge are actually moving. The planets orbit the sun(s) <em>(Yes there are/will be
-        multi-star systems)</em>, moons orbit their planets and moons of moons orbit moons. This system is made, so
-      it&#39;s <strong>synchronized</strong> all around the globe. The positions of ships and objects are
-      <strong>relative to the closest body</strong>. If you land your ship on the border of Ectoso and log off, when
-      you log in you will still be on the border of Ectoso.
-    </p>
-    <h3>Multiplayer!</h3>
-    <h3>Build your own ship!</h3>
-    <p>Pay the <a href="https://starforgemmo.fandom.com/wiki/Ferga_(Station)">Ferga station</a> a visit and edit your
-      ship! (Just don't forget to add an engine please)</p>
-    <h2>Devlog</h2>
+    <h1 id="starforge">Starforge <a href="./Starforge-demo.html">[PLAY ON PC]</a> <- Geit evt. nid (Server updates und
+        so)</h1>
+        <p><strong><em>One of the worst sandbox MMOs in existence</em></strong><br /><br />
+          Starforge will be an MMO Sandbox game playing in space. It will consist of many solar systems scattered across
+          different districts of the galaxy. The only rule outside of Galaxentre is: <strong>There are none.</strong>
+        </p>
+        <h2 id="features">Features</h2>
+        <h3 id="solar-system-simulation">Solar system simulation</h3>
+        <p>Solar systems within Starforge are actually moving. The planets orbit the sun(s) <em>(Yes there are/will be
+            multi-star systems)</em>, moons orbit their planets and moons of moons orbit moons. This system is made, so
+          it&#39;s <strong>synchronized</strong> all around the globe. The positions of ships and objects are
+          <strong>relative to the closest body</strong>. If you land your ship on the border of Ectoso and log off, when
+          you log in you will still be on the border of Ectoso.
+        </p>
+        <h3>Multiplayer!</h3>
+        <h3>Build your own ship!</h3>
+        <p>Pay the <a href="https://starforgemmo.fandom.com/wiki/Ferga_(Station)">Ferga station</a> a visit and edit
+          your
+          ship! (Just don't forget to add an engine please)</p>
+        <h2>Devlog</h2>
 
-    <h3>04.08.2024 - Weapon system!</h3>
-    <p>Ever wanted to take apart an enemy ship part by part! Do it now! The weapon system allows you to target a piece
-      of the enemy ship and attack it, as long as it's in your weapons range. If you realize that the enemy is attacking
-      your warp-engines, you might want to turn away, because once they're destroyed you won't have any chance of
-      escaping…</p>
-    <h4>Other features</h4>
-    <ul>
-      <li>New texture for the Ferga station</li>
-      <li>New Ferga ambient sound</li>
-      <li>New system background images</li>
-      <li>Backgrounds now move!</li>
-      <li>Updated part stats, costs and boosts</li>
-    </ul>
-    <h4>What will the next update be about?</h4>
-    <h5>Big visual update</h5>
-    <p>The next update will be focused on enhancing the weapon system, giving it some visuals. I also want to add a way
-      of showing the player the integrity of his parts.</p>
-    <p>The parts will also receive new textures.</p>
-    <p>You'll maybe see some new parts as well!</p>
-    <h5>Solar system addons</h5>
-    <p>Asteorid belts, more stations and maybe even some NPCs</p>
-    <h4>Play now please!</h4>
-    <p>Your feedback will help me shape the future of this game!</p>
-
-
-
-    <h3>23.06.2024 - Pre-Release v0.01!</h3>
-    <p>I have added some sound effects, and a <strong>CRAZY NEW FEATURE!</strong> You can now go to <a
-        href="https://starforgemmo.fandom.com/wiki/Ferga_(Station)">Ferga</a> and edit your ship! But beware you don't
-      have infinite money...</p>
-    <h4>Additions:</h4>
-    <ul>
-      <li>Sound effects</li>
-      <li>Music</li>
-      <li>Ambient sounds</li>
-      <li>Ferga station</li>
-      <li>Ship editor</li>
-      <li>Economy</li>
-      <li>Warp drive (Automatically enabled for distanes bigger than 500 units)</li>
-      <li>Navigation system</li>
-      <li>Fixed bug: Seeing other players while inside a station</li>
-      <li>Warp drive VFX</li>
-      <li>Some new planets to the <a href="https://starforgemmo.fandom.com/wiki/Byish_(System)">Byish system</a></li>
-    </ul>
+        <h3>04.08.2024 - Weapon system!</h3>
+        <p>Ever wanted to take apart an enemy ship part by part! Do it now! The weapon system allows you to target a
+          piece
+          of the enemy ship and attack it, as long as it's in your weapons range. If you realize that the enemy is
+          attacking
+          your warp-engines, you might want to turn away, because once they're destroyed you won't have any chance of
+          escaping…</p>
+        <h4>Other features</h4>
+        <ul>
+          <li>New texture for the Ferga station</li>
+          <li>New Ferga ambient sound</li>
+          <li>New system background images</li>
+          <li>Backgrounds now move!</li>
+          <li>Updated part stats, costs and boosts</li>
+        </ul>
+        <h4>What will the next update be about?</h4>
+        <h5>Big visual update</h5>
+        <p>The next update will be focused on enhancing the weapon system, giving it some visuals. I also want to add a
+          way
+          of showing the player the integrity of his parts.</p>
+        <p>The parts will also receive new textures.</p>
+        <p>You'll maybe see some new parts as well!</p>
+        <h5>Solar system addons</h5>
+        <p>Asteorid belts, more stations and maybe even some NPCs</p>
+        <h4>Play now please!</h4>
+        <p>Your feedback will help me shape the future of this game!</p>
 
 
-    <h3>21.06.2024 - Pre-release one</h3>
-    <p>Pretty bare at the moment. The solar system renderer has been fully implemented. </strong>Multiplayer is
-      added!</strong> The authentication system is also done. A pre-release test is available <a
-        href="Starforge-demo.html">here</a>. All rights reserved.
-    <h4>Additions:</h4>
-    <ul>
-      <li>Solar systems</li>
-      <li>Authentication system</li>
-      <li>Multiplayer</li>
-      <li>Stargates (To jump between solar systems!)</li>
-      <li>New solar system: <strong>Byish</strong></li>
-    </ul>
-    </p>
-    <br>
+
+        <h3>23.06.2024 - Pre-Release v0.01!</h3>
+        <p>I have added some sound effects, and a <strong>CRAZY NEW FEATURE!</strong> You can now go to <a
+            href="https://starforgemmo.fandom.com/wiki/Ferga_(Station)">Ferga</a> and edit your ship! But beware you
+          don't
+          have infinite money...</p>
+        <h4>Additions:</h4>
+        <ul>
+          <li>Sound effects</li>
+          <li>Music</li>
+          <li>Ambient sounds</li>
+          <li>Ferga station</li>
+          <li>Ship editor</li>
+          <li>Economy</li>
+          <li>Warp drive (Automatically enabled for distanes bigger than 500 units)</li>
+          <li>Navigation system</li>
+          <li>Fixed bug: Seeing other players while inside a station</li>
+          <li>Warp drive VFX</li>
+          <li>Some new planets to the <a href="https://starforgemmo.fandom.com/wiki/Byish_(System)">Byish system</a>
+          </li>
+        </ul>
+
+
+        <h3>21.06.2024 - Pre-release one</h3>
+        <p>Pretty bare at the moment. The solar system renderer has been fully implemented. </strong>Multiplayer is
+          added!</strong> The authentication system is also done. A pre-release test is available <a
+            href="Starforge-demo.html">here</a>. All rights reserved.
+        <h4>Additions:</h4>
+        <ul>
+          <li>Solar systems</li>
+          <li>Authentication system</li>
+          <li>Multiplayer</li>
+          <li>Stargates (To jump between solar systems!)</li>
+          <li>New solar system: <strong>Byish</strong></li>
+        </ul>
+        </p>
+        <br>
   </div>
 </body>
 
