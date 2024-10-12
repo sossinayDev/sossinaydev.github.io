@@ -14,11 +14,37 @@ body {
     padding-bottom: env(safe-area-inset-bottom); /* Ensure safe area padding on mobile */
 }
 
+
+/* WebKit Scrollbar Styles */
+::-webkit-scrollbar {
+    width: 12px;              
+    background-color: #2222223c;  
+}
+
+::-webkit-scrollbar-track {
+    background: #3333333f;         
+    border-radius: 10px;     
+}
+
+::-webkit-scrollbar-thumb {
+    background: #151581;      
+    border-radius: 10px;  
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #1679afb2;      
+}
+
+.sidebar::-webkit-scrollbar {
+    display: none;                        /* Hides the scrollbar */
+}
+
 div {
     margin-bottom: 5%; 
 }
 
 .content {
+    max-width: 60%;
     color: white;
     height: auto; /* Let content expand */
     padding: 10%;
@@ -63,6 +89,29 @@ strong {
 a:visited, a:link {
     margin: 0;
     color: rgb(0, 110, 255);
+}
+
+.sidebar {
+    width: 20%;
+    background-color: hsla(0, 0%, 20%, 0);
+    color: rgb(255, 255, 255);
+    position: fixed;
+    overflow-y: auto;
+    top: 0;
+    right: 0; /* Sidebar on the right */
+    height: 97vh;
+    padding: 15px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0); /* Shadow on the left side of the sidebar */
+}
+.sidebar img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+.content {
+    margin-right: 270px; /* Make room for the sidebar on the right */
+    padding: 20px;
 }
 
 div .cover_container {
@@ -156,5 +205,14 @@ button:disabled {
     .image-link {
         height: 80px;
         margin: 0 5px;
+    }
+    .content {
+        max-width: 100%;            /* Full width content on mobile */
+        margin-right: 0;            /* Remove right margin */
+        padding: 10px;              /* Adjust padding for mobile */
+    }
+
+    .sidebar {
+        display: none;              /* Hide the sidebar on mobile */
     }
 }
