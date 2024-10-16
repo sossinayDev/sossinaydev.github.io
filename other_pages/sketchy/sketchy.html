@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free gift!</title>
+    <style>
+        body {
+            background-color: #ff00ff; /* Bright magenta */
+            font-family: 'Courier New', Courier, monospace; /* Monospace for sketchy feel */
+            color: #00ff00; /* Bright green */
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+            font-size: 20px; /* Large font for chaos */
+        }
+        h1 {
+            color: yellow; /* Yellow for the header */
+            font-size: 5em; /* Huge header */
+            text-shadow: 2px 2px #000; /* Shadow for extra visibility */
+            background-color: blue; /* Blue background */
+            padding: 20px;
+            border: 5px dashed red; /* Red dashed border */
+        }
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 5px solid orange; /* Bright orange border */
+            background-color: #ffff00; /* Bright yellow background */
+            padding: 20px;
+            z-index: 1000;
+            font-size: 24px; /* Larger font */
+        }
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 0, 0, 0.5); /* Red semi-transparent overlay */
+            z-index: 900;
+        }
+        img {
+            width: 200px; /* Larger images */
+            height: auto;
+            margin: 10px;
+            border: 5px dotted green; /* Dotted green border */
+        }
+        .bad-button {
+            background-color: lime; /* Bright lime green */
+            color: red; /* Red text */
+            padding: 15px;
+            border: 5px double purple; /* Double purple border */
+            cursor: pointer;
+            font-size: 2em; /* Very large button text */
+            text-shadow: 1px 1px #000; /* Shadow for button text */
+        }
+        .content {
+            max-width: 600px;
+            margin: 20px auto;
+            text-align: left; /* Align text to the left */
+            font-size: 1.2em; /* Slightly larger font size for readability */
+            line-height: 1.5; /* Increased line height */
+            background-color: #ff9900; /* Bright orange background */
+            border: 5px solid blue; /* Blue border */
+            padding: 10px;
+            box-shadow: 0 0 10px black; /* Shadow effect */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Welcome free_gifts!</h1>
+    <button class="bad-button" onclick="openPopup()">Click Me For Free Gift!</button>
+
+    <div class="overlay" id="overlay"></div>
+    <div class="popup" id="popup">
+        <h2>Congratulations!</h2>
+        <p>你赢得了一个免费的礼物!</p>
+        <button class="bad-button" onclick="closePopup()">Close</button>
+    </div>
+
+    <div class="content">
+        <p>注意! 这是一个非常危险的网站! Please be careful with your personal信息. This site is not responsible for any损失 or问题 that may occur.</p>
+        <p>Every click you make may带来意想不到的结果! 这里有很多无用的信息 and popups. Just ignore them, or you might win a special prize!</p>
+        <p>每天都有成千上万的人访问这个网站. 他们都在寻找虚假的承诺 and unbelievable deals!</p>
+        <p>So, if you want to继续冒险, click around, and see what奇怪的事情 might happen!</p>
+        <p>Don't forget: This website is完全不安全. You might just find a virus instead of a gift!</p>
+    </div>
+
+    <div>
+        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.mos.cms.futurecdn.net%2FohsXtgy8Hmi9PzDNpKhJ5N.jpg&f=1&nofb=1&ipt=5b331d174cec56bbcc4a7fcaf0d8ce945ca1b44051e7748dc2491134bbc90bd7&ipo=images" alt="Sketchy Image 1">
+        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fu.osu.edu%2Fduska.7%2Ffiles%2F2017%2F04%2Fstock-market-3-21gyd1b.jpg&f=1&nofb=1&ipt=6c5b3cdfa772b6930a64407967c743ea33b349c1eff5aaae2c977752d4a995ec&ipo=images" alt="Sketchy Image 2">
+        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpaperset.com%2Fw%2Ffull%2F6%2F3%2F9%2F198465.jpg&f=1&nofb=1&ipt=36b3ef5c8359b5e7e748942f37df0c81ec1fb06bf92d0dd141828cfcf496eef1&ipo=images" alt="Sketchy Image 3">
+    </div>
+
+    <script>
+        function openPopup() {
+            document.getElementById("overlay").style.display = "block";
+            document.getElementById("popup").style.display = "block";
+            alert("Warning! This site may contain viruses!");
+        }
+        function closePopup() {
+            document.getElementById("overlay").style.display = "none";
+            document.getElementById("popup").style.display = "none";
+        }
+
+        // Generate random popups
+        setInterval(() => {
+            openPopup();
+        }, 15000); // 5 seconds
+    </script>
+</body>
+</html>
