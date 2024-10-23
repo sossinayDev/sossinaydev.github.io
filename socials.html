@@ -15,13 +15,13 @@
 <body>
 
   <script>
-    function downloadFlyer1() {
+    function downloadFlyer(num) {
       // Create an anchor element
       const a = document.createElement('a');
       // Set the href to the file path (correct file name and extension)
-      a.href = 'assets/flyer-1.png'; // Ensure the correct path is used
+      a.href = 'assets/flyers/flyer-' + String(num) + '.png'; // Ensure the correct path is used
       // Force the browser to download the file
-      a.setAttribute('download', 'flyer-1.png'); // Suggest file name for the download
+      a.setAttribute('download', 'flyer-' + String(num) + '.png'); // Suggest file name for the download
       // Append anchor to the body temporarily
       document.body.appendChild(a);
       // Trigger the download by simulating a click
@@ -48,12 +48,30 @@
 
     <h2>Help us grow</h2>
     <p>Share those links/flyers with your friends to help us grow!</p>
-    <div class="cover_container">
-      <img src="assets/flyer-1.png" width="400">
-      <br>
-      <button id="flyer1download" onclick="downloadFlyer1()">Download</button>
-    </div>
-    <a href="sossinaydev.github.io">sossinaydev.github.io</a><button class="copy_button" onclick="copy('https:\/\/sossinaydev.github.io')">❏</button>
+    <table class="invisible-table">
+      <tbody>
+        <tr>
+          <td>
+            <div class="cover_container">
+              <img src="assets/flyers/flyer-1.png" width="400">
+              <br>
+              <button id="flyer1download" onclick="downloadFlyer(1)">Download</button>
+            </div>
+          </td>
+          <td>
+            <div class="cover_container">
+              <img src="assets/flyers/flyer-2.png" width="400">
+              <br>
+              <button id="flyer2download" onclick="downloadFlyer(2)">Download</button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+
+    <a href="sossinaydev.github.io">sossinaydev.github.io</a><button class="copy_button"
+      onclick="copy('https:\/\/sossinaydev.github.io')">❏</button>
 
     <br>
   </div>

@@ -14,7 +14,7 @@ function loadImages(pageName) {
 
     function addImage() {
         const imgElement = document.createElement('img');
-        const imgPath = `assets/${pageName}/img_${imageNumber}.png`;
+        const imgPath = `../assets/${pageName}/img_${imageNumber}.png`;
 
         imgElement.src = imgPath;
         imgElement.alt = `Image ${imageNumber} from ${pageName}`;
